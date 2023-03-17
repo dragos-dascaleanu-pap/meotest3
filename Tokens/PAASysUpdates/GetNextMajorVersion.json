@@ -1,0 +1,21 @@
+{
+  "id": 30,
+  "globalId": "a8a01cc0-dc4f-4828-8c30-02a8c86f2a24",
+  "namespace": {
+    "id": 3,
+    "globalId": "5580562e-1d75-43dc-a9ca-e4f4b5665b6b",
+    "name": "PAASysUpdates",
+    "description": "",
+    "isSystem": true
+  },
+  "name": "GetNextMajorVersion",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "[PAASysUpdates:GetMajorUpdate(CurrentVersion=[PAASysUpdates:ReleaseVersion], IsDev=[PAASysUpdates:CheckIfAppIsDev(URL=[URL:Domain])])]",
+    "type": "string"
+  }
+}
